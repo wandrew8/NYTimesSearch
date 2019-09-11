@@ -38,7 +38,6 @@ function grabNYTimesArticles(searchQuery, numberOfRecords, beginDate, endDate) {
             } var snippet = data.response.docs[i].lead_paragraph;
 
 
-
             if (headline == null) {
                 var headline = data.response.docs[i].headline.main;
             } else {
@@ -52,6 +51,7 @@ function grabNYTimesArticles(searchQuery, numberOfRecords, beginDate, endDate) {
 
 $('#searchButton').on('click', function (event) {
     event.preventDefault();
+
     $('#results').empty();
 
     var searchQueryToUse = $('#searchInput').val();
@@ -60,11 +60,12 @@ $('#searchButton').on('click', function (event) {
     var resultsMax = parseInt($('#disabledSelect option:selected').text(), 10);
 
     grabNYTimesArticles(searchQueryToUse, resultsMax, startYear, endYear);
+    $('#searchInput').empty();
 });
 
 $('#clearButton').on('click', function (event) {
     event.preventDefault();
 
-    $("#clearButton").empty();
+    $('#results').empty();
 })
 
