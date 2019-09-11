@@ -60,7 +60,7 @@ $('#searchButton').on('click', function (event) {
     var resultsMax = parseInt($('#disabledSelect option:selected').text(), 10);
 
     grabNYTimesArticles(searchQueryToUse, resultsMax, startYear, endYear);
-    $('#searchInput').empty();
+    $('#searchInput').val("");
 });
 
 $('#clearButton').on('click', function (event) {
