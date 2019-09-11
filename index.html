@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Roboto:900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <img src="assets/images/newspapers-center-image.png" alt="News logo">
+            <h1>New York Times Search</h1>
+        </header>
+
+        <div class="container-fluid">
+            <div class="row bg-light top">
+                <h2>Search Parameters</h2>
+            </div>
+
+            <form>
+                <br>
+                <div class="form-group">
+                    <label for="searchArticles">Search Term:</label>
+                    <input type="searchTerm" class="form-control" id="searchInput">
+                </div>
+                <div class="form-group">
+                    <label for="numberOfResults">Number of Records to Retrieve:</label>
+                    <select id="disabledSelect" class="form-control">
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>20</option>
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="startYear">Start Year (Optional):</label>
+                    <input type="searchTerm" class="form-control" id="startYear">
+                </div>
+                <div class="form-group">
+                    <label for="endYear">End Year (Optional):</label>
+                    <input type="searchTerm" class="form-control" id="endYear">
+                </div>
+                <button type="submit" class="btn mb-2" id="searchButton">Search</button>
+                <button type="clear" class="btn mb-2" id="clearButton">Clear Results</button>
+
+            </form>
+        </div>
+
+        <div class="container-fluid bottom-container">
+            <div class="row bg-light top">
+                <h2>Top Articles</h2>
+            </div>
+            <div class="container article-container" id="results">
+
+            </div>
+        </div>
+
+        
+        
+        
+    </div>
+            <footer class="container-fluid bg-light">
+                <p>Thanks for visiting!</p>
+            </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+</body>
+</html>
