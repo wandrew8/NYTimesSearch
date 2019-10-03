@@ -44,7 +44,11 @@ function grabNYTimesArticles(searchQuery, numberOfRecords, beginDate, endDate) {
                 var headline = data.response.docs[i].headline.print_headline;
             }
 
-            $('#results').append(`<div id="newsDiv" class="well"><h2><a href="${url}">${headline}</h2></a><br><p class='well bg-light'>${snippet}</p></div>`);
+            var image = data.response.docs[i].multimedia[5].url;
+
+            console.log(image);
+
+            $('#results').append(`<div id="newsDiv" class="well"><h2><a href="${url}">${headline}</h2></a><br><img class="nytPhoto" src ='https://www.nytimes.com/${image}'><p class='well bg-light'>${snippet}</p></div>`);
         }
     });
 }

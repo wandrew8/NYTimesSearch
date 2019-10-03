@@ -14,12 +14,22 @@ img {
     padding: 0 30px;
 }
 
+.nytPhoto {
+    height: 150px;
+    width: auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 10px;
+}
+
 h2 {
     font-size: 1.8em;
-    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     color: #0a3d62;
+    padding-top: 20px;
 }
 
 h3 {
@@ -76,4 +86,5 @@ button:hover {
 #newsDiv {
     border: solid 1px #dcdde1;
     margin: 15px 0px;
+    text-align: center;
 }
